@@ -6,7 +6,9 @@ export default function Test() {
   const router = useRouter();
 
   const handleButtonClick = () => {
-    router.push("/new_location");
+    setTimeout(() => {
+      router.push("/test");
+    }, 1000);
   };
   return <button onClick={handleButtonClick}>클릭!</button>;
 }
