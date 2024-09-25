@@ -5,7 +5,7 @@ export default async function Home() {
     cache: "no-store",
   });
   const data: Product[] = await res.json();
-  console.log(data);
+  console.log("render");
 
   return (
     <div>
