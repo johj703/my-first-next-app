@@ -1,10 +1,10 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { Product } from "../page";
 
 const fetchData = async () => {
-  const res = await fetch("http://localhost:4000/products", {
-    cache: "force-cache",
-  });
+  const res = await fetch("http://localhost:4000/products");
   const data: Product[] = await res.json();
 
   return data;
