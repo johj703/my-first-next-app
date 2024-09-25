@@ -14,6 +14,7 @@ const ProductList = () => {
   const [data, setData] = useState<Product[]>([]);
 
   useEffect(() => {
+    console.log("render");
     fetchData().then(setData);
   }, []);
 
