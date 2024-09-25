@@ -1,7 +1,6 @@
-import Link from "next/link";
+"use client";
 
 export default function Home() {
-  const os = require("os");
-  console.log(os.hostname);
+  console.log("어디에서 실행될까요?");
   return <div>안녕하세요! Next.js 입니다.</div>;
 }
