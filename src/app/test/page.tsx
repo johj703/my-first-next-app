@@ -1,10 +1,12 @@
-const TestPage = () => {
-  return (
-    <div>
-      <h1>Test Page</h1>
-      <p>Hello Next</p>
-    </div>
-  );
-};
+"use client";
 
-export default TestPage;
+import { useRouter } from "next/navigation";
+
+export default function Test() {
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    router.push("/new_location");
+  };
+  return <button onClick={handleButtonClick}>클릭!</button>;
+}
