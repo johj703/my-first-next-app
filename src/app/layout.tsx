@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header>Next.js Layout</header>
+        <header>헤더입니다!</header>
         {children}
       </body>
     </html>
