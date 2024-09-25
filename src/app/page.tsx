@@ -2,7 +2,7 @@
 
 export default async function Home() {
   const res = await fetch("http://localhost:4000/products", {
-    cache: "no-store",
+    cache: "force-cache",
   });
   const data: Product[] = await res.json();
   console.log("render");
