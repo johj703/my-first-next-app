@@ -10,6 +10,7 @@ const AdminLayout = ({
   useEffect(() => {
     console.log("렌더링 시 실행됩니다.");
   }, []);
+
   return (
     <>
       <h1>admin Page 입니다!</h1>
