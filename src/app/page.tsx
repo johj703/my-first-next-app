@@ -1,14 +1,7 @@
 import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div>
-      <div>
-        <a href={"/test"}>a로 Test로 이동하기</a>
-      </div>
-      <div>
-        <Link href={"/test"}>Test로 이동하기</Link>
-      </div>
-    </div>
-  );
+  const os = require("os");
+  console.log(os.hostname);
+  return <div>안녕하세요! Next.js 입니다.</div>;
 }
