@@ -1,7 +1,7 @@
 // "use client";
 
 import Image from "next/image";
-import { Product } from "../page";
+import { Product } from "@/type/product";
 // import { useEffect, useState } from "react";
 
 const ProductList = async () => {
