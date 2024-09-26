@@ -1,26 +1,27 @@
-// "use client";
+"use client";
 
 import Image from "next/image";
 import { Product } from "@/type/product";
 import { getProduct } from "@/server-action";
+import { useEffect, useState } from "react";
 // import { useEffect, useState } from "react";
 
-const ProductList = async () => {
-  const { data } = await getProduct();
+const ProductList = () => {
+  // const { data } = await getProduct();
 
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [data, setData] = useState<Product[]>([]);
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   fetch("http://localhost:4000/products")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setData(data);
-  //       setIsLoading(false);
-  //     });
-  // }, []);
+  const [isLoading, setIsLoading] = useState(false);
+  const [data, setData] = useState<Product[]>([]);
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("http://localhost:4000/products")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        setIsLoading(false);
+      });
+  }, []);
 
-  // if (isLoading) return <>Loading..</>;
+  if (isLoading) return <>Loading..</>;
 
   return (
     <div className="p-8 m-4">
