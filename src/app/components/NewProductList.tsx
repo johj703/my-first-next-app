@@ -10,7 +10,7 @@ const NewProductList = async () => {
   if (Math.random() > 0.5) throw new Error("오류!");
 
   return (
-    <div className="flex gap-2 oveflow-auto ">
+    <div className="flex gap-2 w-full oveflow-auto ">
       {newData.map((product) => (
         <div className="flex" key={product.id}>
           <img
