@@ -4,7 +4,9 @@ import { Product } from "../page";
 // import { useEffect, useState } from "react";
 
 const ProductList = async () => {
-  const res = await fetch("http://localhost:4000/products");
+  const res = await fetch("http://localhost:4000/products", {
+    cache: "no-cache",
+  });
   const data: Product[] = await res.json();
   // const [data, setData] = useState<Product[]>([]);
 
