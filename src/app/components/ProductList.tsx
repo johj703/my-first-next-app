@@ -1,21 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Product } from "../page";
-
-const fetchData = async () => {
-  const res = await fetch("http://localhost:4000/products");
-  const data: Product[] = await res.json();
-
-  return data;
-};
+import { useEffect, useState } from "react";
 
 const ProductList = () => {
   const [data, setData] = useState<Product[]>([]);
 
   useEffect(() => {
-    console.log("render");
-    fetchData().then(setData);
+    fetch("http://localhost:4000/products")
+      .then((res) => res.json())
+      .then(setData);
   }, []);
 
   return (
