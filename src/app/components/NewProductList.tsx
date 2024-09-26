@@ -1,4 +1,5 @@
 import { Product } from "@/type/product";
+import Image from "next/image";
 
 const NewProductList = async () => {
   const res = await fetch("http://localhost:4000/products", {
@@ -13,9 +14,10 @@ const NewProductList = async () => {
     <div className="flex gap-2 w-full oveflow-auto ">
       {newData.map((product) => (
         <div className="flex" key={product.id}>
-          <img
+          <Image
             className="rounded-sm object-scale-down"
             width={80}
+            height={80}
             src={product.images}
             alt={product.title}
           />
