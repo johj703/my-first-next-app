@@ -12,12 +12,10 @@ const ProductList = () => {
   const [data, setData] = useState<Product[]>([]);
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://localhost:4000/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setIsLoading(false);
-      });
+    getProduct().then(({ data }) => {
+      setData(data);
+      setIsLoading(false);
+    });
   }, []);
 
   if (isLoading) return <>Loading..</>;
