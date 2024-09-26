@@ -10,7 +10,9 @@ export default async function Home() {
       <Suspense fallback={<Loading />}>
         <NewProductList />
       </Suspense>
-      <ProductList />
+      <Suspense fallback={<Loading />}>
+        <ProductList />
+      </Suspense>
     </div>
   );
 }
