@@ -23,6 +23,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  throw new Error("루트에러!");
   return (
     <html lang="en">
       <body
