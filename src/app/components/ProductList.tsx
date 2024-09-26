@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Product } from "@/type/product";
 import { getProduct } from "@/server-action";
 import { useEffect, useState } from "react";
-// import { useEffect, useState } from "react";
 
 const ProductList = () => {
   // const { data } = await getProduct();
