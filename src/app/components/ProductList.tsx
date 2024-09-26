@@ -2,13 +2,11 @@
 
 import Image from "next/image";
 import { Product } from "@/type/product";
+import { getProduct } from "@/server-action";
 // import { useEffect, useState } from "react";
 
 const ProductList = async () => {
-  const res = await fetch("http://localhost:4000/products", {
-    cache: "no-cache",
-  });
-  const data: Product[] = await res.json();
+  const { data } = await getProduct();
 
   // const [isLoading, setIsLoading] = useState(false);
   // const [data, setData] = useState<Product[]>([]);
