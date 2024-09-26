@@ -1,7 +1,7 @@
 import { Product } from "@/type/product";
 
 const NewProductList = async () => {
-  const res = await fetch("http://localhost:4001/products", {
+  const res = await fetch("http://localhost:4000/products", {
     cache: "no-store",
   });
   const data: Product[] = await res.json();
