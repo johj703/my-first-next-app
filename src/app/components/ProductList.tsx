@@ -1,20 +1,27 @@
-// "use client";
+"use client";
 
 import { Product } from "../page";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const ProductList = async () => {
-  const res = await fetch("http://localhost:4000/products", {
-    cache: "no-cache",
-  });
-  const data: Product[] = await res.json();
-  // const [data, setData] = useState<Product[]>([]);
+const ProductList = () => {
+  // const res = await fetch("http://localhost:4000/products", {
+  //   cache: "no-cache",
+  // });
+  // const data: Product[] = await res.json();
 
-  // useEffect(() => {
-  //   fetch("http://localhost:4000/products")
-  //     .then((res) => res.json())
-  //     .then(setData);
-  // }, []);
+  const [isLoading, setIsLoading] = useState();
+  const [data, setData] = useState<Product[]>([]);
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("http://localhost:4000/products")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        setIsLoading(false);
+      });
+  }, []);
+
+  if (isLoading) return <>Loading..</>;
 
   return (
     <div className="p-8 m-4">
