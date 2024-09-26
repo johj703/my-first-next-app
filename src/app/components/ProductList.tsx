@@ -9,7 +9,7 @@ const ProductList = () => {
   // });
   // const data: Product[] = await res.json();
 
-  const [isLoading, setIsLoading] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState<Product[]>([]);
   useEffect(() => {
     setIsLoading(true);
