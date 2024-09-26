@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="w-full h-[60px]">
+        <header className="w-full flex justify-center items-center h-[60px]">
           <Image height={40} src={logo} alt="logo"></Image>
         </header>
         {children}
