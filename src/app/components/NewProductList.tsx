@@ -7,6 +7,8 @@ const NewProductList = async () => {
   const data: Product[] = await res.json();
   const newData = data.filter((p) => p.isNew);
 
+  throw new Error("오류!");
+
   return (
     <div className="flex gap-2 oveflow-auto ">
       {newData.map((product) => (
