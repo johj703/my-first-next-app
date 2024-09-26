@@ -4,6 +4,7 @@ export async function GET(request: Request) {
       "Content-Type": "application/json",
     },
   });
-  const data = await res.json();
-  return Response.json({ data });
+  const data: Product[] = await res.json();
+  const newData = data.filter((p) => p.isNew);
+  return Response.json({ data: newData });
 }
