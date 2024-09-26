@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Image from "next/image";
+import logo from "public/assets/logo.png";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,7 +31,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header>헤더입니다!</header>
+        <header className="w-full h-[60px]">
+          <Image height={40} src={logo} alt="logo"></Image>
+        </header>
         {children}
       </body>
     </html>
