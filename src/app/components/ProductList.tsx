@@ -1,16 +1,18 @@
-"use client";
+// "use client";
 
 import { Product } from "../page";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-const ProductList = () => {
-  const [data, setData] = useState<Product[]>([]);
+const ProductList = async () => {
+  const res = await fetch("http://localhost:4000/products");
+  const data: Product[] = await res.json();
+  // const [data, setData] = useState<Product[]>([]);
 
-  useEffect(() => {
-    fetch("http://localhost:4000/products")
-      .then((res) => res.json())
-      .then(setData);
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:4000/products")
+  //     .then((res) => res.json())
+  //     .then(setData);
+  // }, []);
 
   return (
     <div className="p-8 m-4">
