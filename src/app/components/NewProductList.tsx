@@ -14,7 +14,7 @@ const NewProductList = async () => {
   return (
     <div className="flex gap-2 w-full overflow-auto ">
       <div className="w-max flex gap-2">
-        {newData.map((product) => {
+        {data.map((product) => {
           return (
             <Link className="flex" href={`/product/${product.id}`}>
               <div
