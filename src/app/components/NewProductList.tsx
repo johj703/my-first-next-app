@@ -7,9 +7,9 @@ const NewProductList = async () => {
     cache: "no-store",
   });
   const data: Product[] = await res.json();
-  const newData = data.filter((p) => p.isNew);
+  // const newData = data.filter((p) => p.isNew);
 
-  if (Math.random() > 0.5) throw new Error("오류!");
+  // if (Math.random() > 0.5) throw new Error("오류!");
 
   return (
     <div className="flex gap-2 w-full overflow-auto ">
