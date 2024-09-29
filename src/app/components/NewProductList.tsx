@@ -16,11 +16,12 @@ const NewProductList = async () => {
       <div className="w-max flex gap-2">
         {data.map((product) => {
           return (
-            <Link className="flex" href={`/product/${product.id}`}>
-              <div
-                className="flex w-[250px] border rounded-sm"
-                key={product.id}
-              >
+            <Link
+              className="flex"
+              href={`/product/${product.id}`}
+              key={product.id}
+            >
+              <div className="flex w-[250px] border rounded-sm">
                 <Image
                   className="rounded-sm object-scale-down"
                   width={80}
